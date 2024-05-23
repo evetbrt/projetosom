@@ -5,10 +5,8 @@
     font-size: 1.5em;
     border-radius: 20px;
 
-    @media screen and (max-width: 780px) {
-        background-color: aquamarine; 
+
 }
-}       
 
 .item2 {
     border-radius: 20px;
@@ -17,9 +15,7 @@
     font-size: 1.5em;
     background-color: grey;
 
-    @media screen and (max-width: 780px) {
-        background-color: aquamarine;
-}
+
 }
 
 
@@ -27,12 +23,14 @@
     display: grid;
 }
 
+
+
 .grid-template {
     grid-template:
         "header header header" 120px
-        "header header header" 90px
-        "content-left section section" 150px
-        "content-left section section" 200px
+        "section section section" 90px
+        "section section section" 150px
+        "section section section" 200px
         "footer footer footer" 120px
         / 1fr 3fr 1fr
 }
@@ -42,7 +40,6 @@
         "header" 50px
         "article" 200px
         "footer" 50px
-        
 }
 
 
@@ -51,93 +48,69 @@
     text-align: left;
     padding-left: 300px;
     padding-top: 50px;
-    background-color: white;
     color: black;
 }
 
-.header img {
+body {
+    background: #0056b3 !important;
+}
+
+
+.barra-topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.barra-topo button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.barra-topo button:hover {
+    background-color: #ddd;
+}
+
+.conteudo {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.img_topo img {
     width: 100px;
-    max-width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.header-button {
-    background-color: #007bff; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    width: 200px;
+    max-width: 50px;
     height: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
+    left: 0;
+    top: 0;
     position: absolute;
-    left: 200px;
-    top: 100px;
-    
-}
-
-
-
-.content-left {
-    grid-area: content-left;
-    height: 500px;
-    background-color: grey;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.sidebar {
-    top: 0; 
-    left: 0; 
-    width: 260x; 
-    height: 100%; 
-    background-color: #33333300; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-   
-
-}
-
-
-.sidebar-btn {
-    width: 100%; 
-    padding: 10px 0; 
-    text-align: center; 
-    background-color: #062ee2;
-    color: #fff; 
-    border: none; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    margin-bottom: 10px; 
-}
-
-.sidebar-btn:hover {
-    background-color: #777;
 }
 
 
 .section {
     grid-area: section;
-    background-color: rgb(214, 188, 214);
     text-align: left;
     color: black;
     height: 500px;
-   
+
 }
 
 .section-button {
     background-color: #007bff;
-    color: #fff; 
-    border: none; 
+    color: #fff;
+    border: none;
     padding: 10px 20px;
-    border-radius: 5px; 
+    border-radius: 5px;
     cursor: pointer;
     width: 200px;
     height: 50px;
@@ -147,8 +120,8 @@
 }
 
 .textarea {
-     resize: none; 
-    }
+    resize: none;
+}
 
 
 .file-label {
@@ -180,41 +153,3 @@
     cursor: pointer;
 }
 
-.header-button {
-    background-color: #007bff; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px;
-    border-radius: 5px; 
-    cursor: pointer; 
-    margin-left: 800px;
-    margin-bottom: 10000px;
-    width: 200px;
-    height: 50px;
-}
-
-
-
-
-
-@media screen and (max-width: 780px) {
-.grid-template{
-    grid-template:
-    "header" 90px
-    "aside" 1fr
-    "section" 1fr
-    "article" 1fr
-    "footer" 150px
-    / 1fr;
-}
-
-.grid-template2 {
-    grid-template:
-        "header" 50px
-        "article" 150px
-        "footer" 10px
-}
-
-
-
-}
