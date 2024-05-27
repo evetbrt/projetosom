@@ -96,6 +96,13 @@ body {
     position: absolute;
 }
 
+@media screen and (max-width: 768px) {
+    .barra-topo {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 .section {
     grid-area: section;
@@ -130,6 +137,8 @@ body {
     box-sizing: border-box;
 }
 
+
+
 h2 {
     margin-bottom: 20px;
     color: #333;
@@ -149,6 +158,24 @@ h2 {
     
 }
 
+@media (max-width: 480px) {
+    .textbox {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
+        width: 100%;
+        
+    }
+}
+
 .send-button {
     width: 100%;
     padding: 10px;
@@ -158,6 +185,13 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .send-button {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .send-button:hover {
